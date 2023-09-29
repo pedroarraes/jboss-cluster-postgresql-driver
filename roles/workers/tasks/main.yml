@@ -1,0 +1,20 @@
+- name: Create directory for Postgresql driver
+  file:
+    path: "{{ JBOSS_HOME }}/modules/org/postgresql/main"
+    state: directory
+    mode: 0755
+    owner: "{{ JBOSS_USER }}"
+
+- name: Download Postgresql driver to host
+  get_url:
+    url: "{{ POSTGRESQL_DRIVER_URL }}"
+    dest: "{{ JBOSS_HOME }}/modules/org/postgresql/main/postgresql.jar"
+    mode: 0644
+    owner: "{{ JBOSS_USER }}"
+
+- name: Create module.xml for Postgresql driver
+  template:
+    src: files/module.xml
+    dest: "{{ JBOSS_HOME }}/modules/org/postgresql/main/module.xml"
+    mode: 0644
+    owner: "{{ JBOSS_USER }}"

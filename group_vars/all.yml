@@ -1,0 +1,4 @@
+POSTGRESQL_DRIVER_VERSION: 42.2.5
+POSTGRESQL_DRIVER_URL: https://jdbc.postgresql.org/download/postgresql-{{ POSTGRESQL_DRIVER_VERSION }}.jar
+JBOSS_HOME: /opt/jboss-eap-7.4
+JBOSS_USER: jboss-eap

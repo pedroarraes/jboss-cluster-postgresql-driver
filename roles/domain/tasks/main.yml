@@ -1,0 +1,13 @@
+- name: Create Postgresql Non-XA Driver in profile full-ha
+  shell: "{{ JBOSS_HOME }}/bin/jboss-cli.sh --connect --command='/profile=full-ha/subsystem=datasources/jdbc-driver=postgresql:add(driver-name=postgresql, driver-module-name=org.postgresql, driver-class-name=org.postgresql.Driver)'"
+  register: postgresql_driver
+
+- debug:
+    var: postgresql_driver
+
+- name: Create Postgresql XA Driver in profile full-ha
+  shell: "{{ JBOSS_HOME }}/bin/jboss-cli.sh --connect --command='/profile=full-ha/subsystem=datasources/jdbc-driver=postgresql-xa:add(driver-name=postgresql-xa, driver-module-name=org.postgresql, driver-xa-datasource-class-name=org.postgresql.xa.PGXADataSource)'"
+  register: postgresql_xa_driver
+
+- debug:
+    var: postgresql_xa_driver

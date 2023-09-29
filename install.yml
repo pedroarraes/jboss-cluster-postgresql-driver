@@ -1,0 +1,13 @@
+- hosts: all
+  remote_user: root
+  become: yes
+  become_method: sudo
+  roles:
+    - workers
+
+- hosts: domaincontroller
+  remote_user: root
+  become: yes
+  become_method: sudo
+  roles:
+    - domain
