@@ -1,4 +1,4 @@
-# Install Postgresql drivers using ansible
+# Install Postgresql drivers on JBoss EAP cluster using ansible
 This Ansible script is designed to efficiently download and install both XA and non-XA PostgreSQL drivers on a JBoss EAP cluster.
 
 ## Requeriments
