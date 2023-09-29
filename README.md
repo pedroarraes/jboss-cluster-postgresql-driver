@@ -10,16 +10,10 @@ This Ansible script is designed to efficiently download and install both XA and 
 * JBoss EAP 7.4.
 
 ## Summary
-* [Downloading JBoss EAP](#downloading-jboss-eap)
-  * [Installer](#installer)
-  * [Patches](#patches)
 * [Ansible Script](#ansible-script)
   * [Folder group_vars](#folder-group_vars)
-  * [Folder packages](#folder-packages)
   * [Folder roles](#folder-roles)
   * [Files install.yml and host](#files-installyml-and-host)
-* [Cluster EAP](#cluster-eap)
-* [Load Balancer](#load-balancer)
 * [Executing script](#executing-script)
 
 This section outlines the steps to download JBoss EAP and apply patches for updates.
